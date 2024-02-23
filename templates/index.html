@@ -1,0 +1,110 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <title>Anouar Asmai Challenge</title>
+
+        <!-- Bootstrap core CSS -->
+        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <style>
+            .bd-placeholder-img {
+                font-size: 1.125rem;
+                text-anchor: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+            @keyframes scalePhoto{
+                0% {transform: scale(1);}
+                100% {transform: scale(1.1);border-radius: 0px;}
+            }
+
+            .col-md-4:hover{
+                animation-name: scalePhoto;
+                animation-duration: 0.5s;
+                animation-delay: 0.1s;
+                animation-fill-mode: forwards;
+            }
+            /* :hover {
+                transform: scale(1);
+                margin-left: -10px;
+                margin-top: 10px;
+            } */
+
+            @media (min-width: 768px) {
+                .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+                }
+            }
+
+            .jumbotron {
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+                margin-bottom: 0;
+                background-color: #fff;
+            }
+
+            @media (min-width: 768px) {
+                .jumbotron {
+                    padding-top: 6rem;
+                    padding-bottom: 6rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+    
+    <header>
+        <div class="navbar navbar-dark bg-dark shadow-sm">
+            <div class="container d-flex justify-content-between">
+                <a href="#" class="navbar-brand d-flex align-items-center">
+                    <strong>Software Challenge MARKT PILOT</strong>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main role="main">
+        <section class="jumbotron text-center">
+            <div class="container">
+                <h1 class="jumbotron-heading">Scraped Items</h1>
+                
+                <form action="/" method="POST">
+                    <input type="submit" value="Scrap" class="btn btn-primary my-2" />
+                </form>
+            </div>
+        </section>
+        <div class="album py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    {% for row in rows %}
+                        <div class="col-md-4" style="z-index: 10;">
+                            <a>
+                                <div class="card mb-4 shadow-sm" >
+                                    <div class="bd-placeholder-img card-img-top"  style="height: 200px; background-image: url('{{ row[7] }}'); background-size: contain; background-repeat: no-repeat; background-position: center;">   </div>
+                                        <div class="card-body">
+                                            <h6>{{ row[2] }}</h6>
+                                            <hr/>
+                                            <div style="text-align: right; font-size: 20px; font-weight: 700;">${{ row[3] }}</div>
+                                            <div><span>Delivery Time : {{ row[4] }} Business days</span></div>
+                                            <div><span>Needle Size : {{ row[5] }}</span></div>
+                                            <div><span>Composition : {{ row[6] }}</span></div>
+                                            <div><span>Last Update : <h6>{{ row[8] }}</h6></span></div>
+                                        </div>
+                                </div>
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+
+</body></html>
