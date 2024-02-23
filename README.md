@@ -181,7 +181,4 @@ For the connection with the database, I created a separate class which contains 
 Finally, I did some small unit tests for testing if my spider did the scraping well, these tests are included inside `testSpider.py` file.
 
 
->### *Note1 : For running the application, you will have to run the `app.py` file which is runned in the localhost:8081* 
-
-
->### *Note2 : I didn't find the last Brands on the csv file in the website, so I worked with another random one instead of the others* 
+>### Note1 : *To run the application, you will have to run the `app.py` file which is runned in the localhost:8081* 
