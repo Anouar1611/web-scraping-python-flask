@@ -14,7 +14,7 @@ class ProductSpider2(scrapy.Spider):
 
     def start_requests(self):
         urls = [
-            'https://www.wollplatz.de/wolle/drops/drops-baby-merino-mix'
+            # URLs here
         ]
         
         for url in urls:

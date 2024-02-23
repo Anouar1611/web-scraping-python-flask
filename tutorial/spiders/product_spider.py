@@ -14,10 +14,7 @@ class ProductSpider(scrapy.Spider):
 
     def start_requests(self):
         urls = [
-            'https://www.wollplatz.de/wolle/drops/drops-safran',
-            'https://www.wollplatz.de/wolle/dmc/dmc-natura-xl',
-            'https://www.wollplatz.de/wolle/stylecraft/stylecraft-special-dk',
-            'https://www.wollplatz.de/wolle/drops/drops-baby-merino-mix'
+            # URLs of what you want to scrap here
         ]
         
         for url in urls:
