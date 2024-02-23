@@ -1,4 +1,4 @@
-# Software Challenge MARKT PILOT
+# Full Stack web application using Flask and Scrapy Python
 
 For this challenge, there are two popular libraries for scraping data from websites:
 
